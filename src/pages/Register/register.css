@@ -1,0 +1,61 @@
+form {
+    margin: 0 auto;
+    width: 70%;
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        width: 95%;
+    }
+
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    border-radius: 5px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.password-input {
+    position: relative;
+
+}
+
+.form-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+    color: black;
+}
+
+.icon-en {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    
+}
+
+.icon-ar {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    color: black;
+    
+}
+
+
+.error-text {
+    color: rgb(234, 74, 74);
+    font-size: 12px;
+    margin-top: 0px;
+}
+
