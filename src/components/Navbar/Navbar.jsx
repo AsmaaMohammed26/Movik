@@ -19,11 +19,16 @@ import ToggleModeButton from "../ToggleModeButton";
 import { useLang } from "../../contexts/langContext";
 import { useToken } from "../../contexts/userContext";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from '@mui/material/Link';
+import { Link as RouterLink } from 'react-router-dom';
 import styles from "./Navbar.module.css";
 import { useLocation } from "react-router-dom";
 
+
+
+
 function Navbar() {
+
   const location = useLocation();
   console.log(location.pathname)
   const { t } = useTranslation();
@@ -95,18 +100,19 @@ function Navbar() {
                     gap: "20px",
                     alignItems: "start",
                     mb: "15px",
+                   
                   }}
                 >
-                  <Link className={styles.link} to="/home">
+                  <Link component={RouterLink} className={styles.link} to="/home" >
                     {t("home")}
                   </Link>
-                  <Link className={styles.link} to="/movies">
+                  <Link component={RouterLink} className={styles.link} to="/movies">
                     {t("movies")}
                   </Link>
-                  <Link className={styles.link} to="/tv">
+                  <Link component={RouterLink} className={styles.link} to="/tv">
                     {t("tv")}
                   </Link>
-                  <Link className={styles.link} to="/people">
+                  <Link component={RouterLink} className={styles.link} to="/people">
                     {t("people")}
                   </Link>
                 </MenuItem>
@@ -131,11 +137,11 @@ function Navbar() {
               ) : (
                 
                   location.pathname === "/register" ? (
-                    <Link className={styles.link} to="/login">
+                    <Link component={RouterLink} className={styles.link} to="/login">
                       {t("login")}
                     </Link>
                   ) : (
-                    <Link className={styles.link} to="/register">
+                    <Link  component={RouterLink} className={styles.link} to="/register">
                       {t("register")}
                     </Link>
                   )
@@ -150,18 +156,16 @@ function Navbar() {
               alignItems: "center",
             }}
           >
-            <MovieIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+            <MovieIcon sx={{ display: { xs: "flex", md: "none" }, mr: "1px" }} />
             <Typography
-              variant="h5"
+              variant="h6"
               noWrap
               component="a"
               href="#app-bar-with-responsive-menu"
               sx={{
-                mr: 2,
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
-
-                fontWeight: 700,
+                fontWeight: 400,
                 letterSpacing: ".3rem",
                 textDecoration: "none",
               }}
@@ -177,16 +181,16 @@ function Navbar() {
                 gap: "20px",
               }}
             >
-              <Link className={styles.link} to="/home">
+              <Link component={RouterLink} className={styles.link} to="/home">
                 {t("home")}
               </Link>
-              <Link className={styles.link} to="/movies">
+              <Link component={RouterLink} className={styles.link} to="/movies">
                 {t("movies")}
               </Link>
-              <Link className={styles.link} to="/tv">
+              <Link component={RouterLink} className={styles.link} to="/tv">
                 {t("tv")}
               </Link>
-              <Link className={styles.link} to="/people">
+              <Link  component={RouterLink} className={styles.link} to="/people">
                 {t("people")}
               </Link>
             </Box>
@@ -224,11 +228,11 @@ function Navbar() {
               </Button>
             ) : (
               location.pathname === "/register" ? (
-                <Link className={styles.link} to="/login">
+                <Link component={RouterLink} className={styles.link} to="/login">
                   {t("login")}
                 </Link>
               ) : (
-                <Link className={styles.link} to="/register">
+                <Link component={RouterLink} className={styles.link} to="/register">
                   {t("register")}
                 </Link>
               )
