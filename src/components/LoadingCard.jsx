@@ -25,7 +25,7 @@ export default function LoadingCard({ elementName }) {
           <Skeleton
             variant="rectangular"
             animation="wave"
-            sx={{ width: {xs:"95vw", sm:"100%"}, height: { xs: 180, sm: 250 } }}
+            sx={{ width: {xs:"90vw", sm:"100%"}, height: { xs: 180, sm: 250 } }}
           />
           <CardContent>
             <Skeleton variant="text" width="80%" height={24} />
